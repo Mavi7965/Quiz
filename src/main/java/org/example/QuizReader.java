@@ -52,7 +52,7 @@ public class QuizReader {
 
             System.out.println("Question: " + question);
 
-            if (answer.equals(inputScanner.nextLine())){
+            if ((answer.toLowerCase()).equals(inputScanner.nextLine().toLowerCase())){
                 System.out.println("Correct");
             }else{
                 System.out.println("Wrong! Answer: " + answer);
