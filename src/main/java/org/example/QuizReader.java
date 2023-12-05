@@ -3,6 +3,8 @@ package org.example;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class QuizReader {
 
@@ -17,6 +19,7 @@ public class QuizReader {
 
 
         if (listOfFiles != null) {
+            Collections.shuffle(Arrays.asList(listOfFiles));
             for (File file : listOfFiles) {
                 if (file.isFile()) {
                     readQuestionFromFile(file);
