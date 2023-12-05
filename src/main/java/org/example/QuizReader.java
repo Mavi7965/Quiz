@@ -2,9 +2,10 @@ package org.example;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Arrays;
-import java.util.Collections;
 
 public class QuizReader {
 
@@ -19,8 +20,12 @@ public class QuizReader {
 
 
         if (listOfFiles != null) {
-            Collections.shuffle(Arrays.asList(listOfFiles));
-            for (File file : listOfFiles) {
+
+            List<File> filesList = Arrays.asList(listOfFiles);
+
+            Collections.shuffle(filesList);
+
+            for (File file : filesList) {
                 if (file.isFile()) {
                     readQuestionFromFile(file);
                 }
