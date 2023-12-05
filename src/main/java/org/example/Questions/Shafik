@@ -1,0 +1,1 @@
+what is your best tip for java beginners to get better with the logics in java codes when its needed?
